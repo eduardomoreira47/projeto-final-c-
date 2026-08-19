@@ -15,7 +15,7 @@
 - Posicionamento aleatório da comida.
 - Teste de compilação e execução do programa.
 
-**Maior dificuldade encontrada e como resolvi (ou não resolvi):**
+**Maior dificuldade encontrada:**
 
 A maior dificuldade foi perceber como organizar o código entre os ficheiros `main.c`, `game.c` e `game.h` e como representar a cobra e a comida no tabuleiro. Consegui resolver esta parte utilizando funções, uma matriz e uma estrutura (`struct`) para guardar as posições.
 
