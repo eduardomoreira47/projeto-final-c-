@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include "game.h"
 
-int main(void)
+int main()
 {
-    printf("Projeto final C\n");
+    iniciarJogo();
+
     return 0;
 }
