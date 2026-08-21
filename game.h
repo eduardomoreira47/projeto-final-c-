@@ -14,5 +14,11 @@ typedef struct
 void iniciarJogo();
 void mostrarTabuleiro();
 void reposicionarComida();
+void moverCobra(char direcao);
+int verificarColisao();
+int verificarColisaoCorpo();
+int verificarComida();
+void reiniciarCobra();
+void mostrarMenu();
 
 #endif
