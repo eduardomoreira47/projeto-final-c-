@@ -73,6 +73,9 @@ Cerca de 150 a 200 linhas.
 * Criação de `extras.c` e `extras.h`.
 * Testes de compilação e execução.
 
+
+Foi adicionada uma função recursiva para verificar se a cabeça da cobra colide com o próprio corpo. Esta alteração permitiu aplicar o conceito de recursão ao funcionamento do jogo.
+
 **Maior dificuldade encontrada:**
 
 A maior dificuldade foi dividir o código que estava no `game.c` por vários ficheiros sem alterar o funcionamento do jogo. Também foi necessário corrigir alguns erros relacionados com variáveis e funções que eram utilizadas em diferentes ficheiros.
