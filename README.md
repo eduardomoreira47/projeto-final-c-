@@ -32,23 +32,19 @@ Q - Sair
 
 projeto-final-c/
 
-main.c
-game.c
-game.h
-snake.c
-snake.h
-board.c
-board.h
-world.c
-world.h
-menu.c
-menu.h
-extras.c
-extras.h
-README.md
-log.md
-.gitignore
-highscore.txt
+Estrutura
+
+main.c - inicia o programa
+game.c / game.h - controla o jogo
+snake.c / snake.h - controla a cobra
+board.c / board.h - desenha o tabuleiro
+world.c / world.h - gere comida e obstáculos
+menu.c / menu.h - gere os menus
+extras.c / extras.h - funcionalidades extra
+README.md - documentação do projeto
+log.md - registo do desenvolvimento
+.gitignore - ficheiros ignorados pelo Git
+highscore.txt - guarda o recorde
 
 ## Conceitos utilizados
 
