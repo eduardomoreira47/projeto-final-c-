@@ -4,6 +4,7 @@
 void moverCobra(char direcao);
 int verificarColisao();
 int verificarColisaoCorpo();
+int verificarColisaoCorpoRecursiva(int indice);
 int verificarComida();
 void reiniciarCobra();
 

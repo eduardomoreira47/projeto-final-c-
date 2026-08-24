@@ -74,11 +74,10 @@ Cerca de 150 a 200 linhas.
 * Testes de compilação e execução.
 
 
-Foi adicionada uma função recursiva para verificar se a cabeça da cobra colide com o próprio corpo. Esta alteração permitiu aplicar o conceito de recursão ao funcionamento do jogo.
 
 **Maior dificuldade encontrada:**
 
-A maior dificuldade foi dividir o código que estava no `game.c` por vários ficheiros sem alterar o funcionamento do jogo. Também foi necessário corrigir alguns erros relacionados com variáveis e funções que eram utilizadas em diferentes ficheiros.
+A maior dificuldade foi dividir o código que estava no `game.c` por vários ficheiros sem alterar o funcionamento do jogo. Também foi necessário corrigir alguns erros relacionados com variáveis e funções que eram utilizadas em diferentes ficheiros. Outra  dificuldade foi perceber como aplicar recursão ao jogo. A solução foi criar uma função que verifica cada segmento do corpo da cobra e chama a própria função para verificar o segmento seguinte.
 
 **Próximo passo planeado:**
 
