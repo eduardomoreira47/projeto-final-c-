@@ -1,47 +1,71 @@
-# C-Snake 🐍
+# C-Snake
 
 ## Descrição
 
 C-Snake é um jogo desenvolvido em linguagem C, baseado num jogo Snake que desenvolvi anteriormente no Scratch.
 
-O jogador controla uma cobra, apanha comida e tenta obter a maior pontuação possível enquanto evita os limites do tabuleiro e obstáculos em movimento.
+O objetivo é controlar a cobra, apanhar comida, aumentar a pontuação e evitar os limites do tabuleiro e os obstáculos.
 
 ## Funcionalidades
 
-- Movimento da cobra
-- Comida em posições aleatórias
-- Crescimento da cobra
-- Obstáculos com movimento
-- Sistema de pontuação
-- Sistema de vidas
-- Velocidade variável
-- Condições de vitória e derrota
+* 3 níveis de dificuldade
+* Movimento e crescimento da cobra
+* Comida aleatória
+* Obstáculos
+* Sistema de vidas
+* Sistema de pontuação
+* High Score
+* Velocidade variável
+* Pausa
+* Menu principal
 
 ## Controlos
 
-- `W` - Cima
-- `S` - Baixo
-- `A` - Esquerda
-- `D` - Direita
-
-## Conceitos utilizados
-
-- Funções
-- Matrizes
-- Arrays
-- Strings
-- `if` / `else`
-- `switch`
-- Ciclos `for` e `while`
-- `struct`
-- Recursão
+W - Cima
+S - Baixo
+A - Esquerda
+D - Direita
+P - Pausa
+Q - Sair
 
 ## Estrutura
 
-```text
 projeto-final-c/
-├── main.c
-├── game.c
-├── game.h
-├── README.md
-└── LOG.md
+
+main.c
+game.c
+game.h
+snake.c
+snake.h
+board.c
+board.h
+world.c
+world.h
+menu.c
+menu.h
+extras.c
+extras.h
+README.md
+log.md
+.gitignore
+highscore.txt
+
+## Conceitos utilizados
+
+Funções
+Arrays
+Matrizes
+Struct
+Ciclos for e while
+if / else
+switch
+Ficheiros
+Programação modular
+
+## Compilação
+
+gcc main.c game.c snake.c board.c world.c menu.c extras.c -o csnake.exe -lncursesw
+
+## Execução
+
+./csnake.exe

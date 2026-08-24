@@ -53,3 +53,34 @@ Adicionar melhorias como recorde, pausa e aumento da velocidade.
 **Linhas de código escritas hoje (estimativa):**
 
 Cerca de 150 a 200 linhas.
+
+# Registo de Desenvolvimento
+
+## Sessão 3 – 21/08/2026
+
+**Funcionalidades implementadas hoje:**
+
+* Adição de 3 níveis de dificuldade.
+* Alteração da velocidade de jogo conforme a dificuldade.
+* Adição de obstáculos.
+* Sistema de pausa com `P`.
+* Sistema de High Score.
+* Organização do código em vários ficheiros.
+* Criação de `snake.c` e `snake.h`.
+* Criação de `board.c` e `board.h`.
+* Criação de `world.c` e `world.h`.
+* Criação de `menu.c` e `menu.h`.
+* Criação de `extras.c` e `extras.h`.
+* Testes de compilação e execução.
+
+**Maior dificuldade encontrada:**
+
+A maior dificuldade foi dividir o código que estava no `game.c` por vários ficheiros sem alterar o funcionamento do jogo. Também foi necessário corrigir alguns erros relacionados com variáveis e funções que eram utilizadas em diferentes ficheiros.
+
+**Próximo passo planeado:**
+
+Continuar a testar o jogo, corrigir possíveis erros e melhorar a organização do projeto.
+
+**Linhas de código escritas hoje (estimativa):**
+
+

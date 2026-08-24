@@ -1,9 +1,10 @@
 #ifndef GAME_H
 #define GAME_H
 
-#define ALTURA 20
 #define LARGURA 40
+#define ALTURA 20
 #define TAM_MAX 100
+#define MAX_OBSTACULOS 50
 
 typedef struct
 {
@@ -11,14 +12,22 @@ typedef struct
     int y;
 } Posicao;
 
+extern Posicao cobra[TAM_MAX];
+extern Posicao comida;
+
+extern int tamanhoCobra;
+extern int pontuacao;
+extern int vidas;
+extern int dificuldade;
+
+extern Posicao obstaculos[MAX_OBSTACULOS];
+extern int numeroObstaculos;
+
 void iniciarJogo();
-void mostrarTabuleiro();
+
 void reposicionarComida();
-void moverCobra(char direcao);
-int verificarColisao();
-int verificarColisaoCorpo();
-int verificarComida();
-void reiniciarCobra();
-void mostrarMenu();
+void criarObstaculos(int quantidade);
+void mostrarTabuleiro();
+int verificarColisaoObstaculo();
 
 #endif
