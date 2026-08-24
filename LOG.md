@@ -56,7 +56,7 @@ Cerca de 150 a 200 linhas.
 
 # Registo de Desenvolvimento
 
-## Sessão 3 – 21/08/2026
+## Sessão 3 – 24/08/2026
 
 **Funcionalidades implementadas hoje:**
 
