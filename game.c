@@ -12,9 +12,9 @@
 #include "menu.h"
 
 Posicao cobra[TAM_MAX] = {
-    {20, 10},
-    {19, 10},
-    {18, 10}
+{20, 10},
+{19, 10},
+{18, 10}
 };
 
 Posicao comida;
@@ -29,11 +29,20 @@ int numeroObstaculos = 0;
 
 void iniciarJogo()
 {
-    int tecla;
+int tecla;
+int jogarNovamente = 1;
+srand(time(NULL));
+
+initscr();
+cbreak();
+noecho();
+curs_set(0);
+keypad(stdscr, TRUE);
+
+while (jogarNovamente)
+{
     char direcao = 'd';
     int jogoAtivo = 1;
-
-    srand(time(NULL));
 
     carregarHighScore();
 
@@ -43,12 +52,6 @@ void iniciarJogo()
     numeroObstaculos = 0;
 
     reiniciarCobra();
-
-    initscr();
-    cbreak();
-    noecho();
-    curs_set(0);
-    keypad(stdscr, TRUE);
 
     nodelay(stdscr, FALSE);
 
@@ -147,6 +150,7 @@ void iniciarJogo()
             if (mostrarPausa() == 0)
             {
                 jogoAtivo = 0;
+                jogarNovamente = 0;
             }
 
             continue;
@@ -155,6 +159,7 @@ void iniciarJogo()
                  tecla == 'Q')
         {
             jogoAtivo = 0;
+            jogarNovamente = 0;
             continue;
         }
 
@@ -196,12 +201,34 @@ void iniciarJogo()
 
                 mvprintw(ALTURA + 6,
                          0,
-                         "Prima uma tecla para sair.");
+                         "1 - Jogar novamente");
+
+                mvprintw(ALTURA + 7,
+                         0,
+                         "2 - Sair");
 
                 refresh();
-                getch();
 
-                jogoAtivo = 0;
+                while (1)
+                {
+                    tecla = getch();
+
+                    if (tecla == '1')
+                    {
+                        jogarNovamente = 1;
+                        jogoAtivo = 0;
+                        break;
+                    }
+
+                    if (tecla == '2' ||
+                        tecla == 'q' ||
+                        tecla == 'Q')
+                    {
+                        jogarNovamente = 0;
+                        jogoAtivo = 0;
+                        break;
+                    }
+                }
             }
         }
         else
@@ -209,21 +236,26 @@ void iniciarJogo()
             verificarComida();
         }
 
-        mostrarTabuleiro();
+        if (jogoAtivo)
+        {
+            mostrarTabuleiro();
 
-        if (dificuldade == 1)
-        {
-            napms(200);
-        }
-        else if (dificuldade == 2)
-        {
-            napms(150);
-        }
-        else
-        {
-            napms(100);
+            if (dificuldade == 1)
+            {
+                napms(200);
+            }
+            else if (dificuldade == 2)
+            {
+                napms(150);
+            }
+            else
+            {
+                napms(100);
+            }
         }
     }
+}
 
-    endwin();
+endwin();
+
 }
